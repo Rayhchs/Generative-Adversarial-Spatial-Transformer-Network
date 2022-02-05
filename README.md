@@ -47,18 +47,19 @@ Discriminator follows the structure of [PatchGAN](https://arxiv.org/pdf/1611.070
     
 * Train
 
-      python -m main train
-    
-**Afterward, input the direction of input **
+	  python -m main train <txt filename>
+	  
+Txt file will contain filename of input and label images. (e.g., ./data/train/A/1.jpg, ./data/train/B/1.jpg)
 
 * For training detail:
 
-      tensorboard --logdir=./log
+	  tensorboard --logdir=./log
 
 * Test
-      python -m main test
-      
-**Then, input the direction of testing data**
+
+	  python -m main test <txt filename> 
+	  
+Txt file will only contain filename of input images.  (e.g., ./data/testA/1.jpg)
 
 ## Results
 
