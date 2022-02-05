@@ -1,6 +1,6 @@
 # Generative-Adversarial-Spatial-Transformer-Network (GASTN)
 
-[Spatial Transformer Network](https://arxiv.org/pdf/1506.02025.pdf), proposed by Max Jaderberg, Karen Simonyan, Andrew Zisserman and Koray Kavukcuoglu, is used to solve the spatial invariant problem of CNN model. In the origin paper, STN is a module which can be inserted anywhere in the network. Therefore, this repository consturcts a Generative Adversarial Network using Spatial Transformer Network to detect and orthorify the object from an image. In this repo, we use this GASTN to detect and orthorify the license plate of Taiwan from an image. However, due to lack of car plate images, this repo only adopts approximately 100 of training data and several testing data.
+[Spatial Transformer Network](https://arxiv.org/pdf/1506.02025.pdf), proposed by Max Jaderberg, Karen Simonyan, Andrew Zisserman and Koray Kavukcuoglu, is used to solve the spatial invariant problem of CNN model. In the origin paper, STN is a module which can be inserted anywhere in the network. Therefore, this repository constructs a Generative Adversarial Network using Spatial Transformer Network to detect and orthorectify the object from an image. In this repo, we use this GASTN to detect and orthorectify the license plate of Taiwan from an image. However, due to lack of car plate images, this repo only adopts approximately 100 of training data and several testing data.
 
 
 ## Spatial Transformer Network
@@ -19,7 +19,7 @@ Since the output parameters of localization network is not usually integers, sam
 
 ## Network Structure
 <div align=center><img src="https://github.com/Rayhchs/Generative-Adversarial-Spatial-Transformer-Network/blob/main/img/Network.jpg" width="720"></div>
-The network is composed of a STN generator and a discriminator. The STN generator is used for spatial transformation of the input image. The discriminator distinguishes the orthorified image and non-orthorified image.
+The network is composed of a STN generator and a discriminator. The STN generator is used for spatial transformation of the input image. The discriminator distinguishes the orthorectified image and non-orthorectified image.
 
 ### STN Generator
 Generator is a single STN. This repo only modify the localization net of STN, which is shown in below:
@@ -36,7 +36,7 @@ For Generator loss, this repository involves Vanilla GAN loss as well as MSE los
 
 * **L2 loss:**  
 <div align=center><img src="https://github.com/Rayhchs/Generative-Adversarial-Spatial-Transformer-Network/blob/main/img/MSE_loss.png" height="60"></div>
-Where y is orthorified image and G(x) is transformed image
+Where y is orthorectified image and G(x) is transformed image
 
 * **Final objective:** 
 <div align=center><img src="https://github.com/Rayhchs/Generative-Adversarial-Spatial-Transformer-Network/blob/main/img/OB.png" height="72"></div>
@@ -63,7 +63,7 @@ Lambda is set as 1 for this case.
     
 * Train
 
-	  python -m main train <txt filename>
+	  python -m main train -f=<txt filename>
 	  
 Txt file will contain filename of input and label images. (e.g., ./data/train/A/1.jpg, ./data/train/B/1.jpg)
 
@@ -82,10 +82,10 @@ There is one input: direction of testing image
 The model is trained by less than 100 data. The config.py shows the configuration of the training. Testing results are shown in below.
 | Origin image | Transformed image | Ground truth |
 | ------------- | ------------- | ------------- |
+| <img src="https://github.com/Rayhchs/Generative-Adversarial-Spatial-Transformer-Network/blob/main/data/test/5.png" width="250"> | <img src="https://github.com/Rayhchs/Generative-Adversarial-Spatial-Transformer-Network/blob/main/result/5.png" width="250"> | <img src="https://github.com/Rayhchs/Generative-Adversarial-Spatial-Transformer-Network/blob/main/data/true/5.png" width="250">|
 | <img src="https://github.com/Rayhchs/Generative-Adversarial-Spatial-Transformer-Network/blob/main/data/test/1387089134-2970851851.jpg" width="250"> | <img src="https://github.com/Rayhchs/Generative-Adversarial-Spatial-Transformer-Network/blob/main/result/1387089134-2970851851.jpg" width="250"> | <img src="https://github.com/Rayhchs/Generative-Adversarial-Spatial-Transformer-Network/blob/main/data/true/1387089134-2970851851.jpg" width="250">|
-| <img src="https://github.com/Rayhchs/Generative-Adversarial-Spatial-Transformer-Network/blob/main/data/test/278132117_274e46f759.jpg" width="250"> | <img src="https://github.com/Rayhchs/Generative-Adversarial-Spatial-Transformer-Network/blob/main/result/278132117_274e46f759.jpg" width="250"> | <img src="https://github.com/Rayhchs/Generative-Adversarial-Spatial-Transformer-Network/blob/main/data/true/278132117_274e46f759.jpg" width="250">|
 | <img src="https://github.com/Rayhchs/Generative-Adversarial-Spatial-Transformer-Network/blob/main/data/test/gm-didi-app-lets-you-scan-a-license-plate-and-text-the-owner-wait-what-82759-7.jpg" width="250"> | <img src="https://github.com/Rayhchs/Generative-Adversarial-Spatial-Transformer-Network/blob/main/result/gm-didi-app-lets-you-scan-a-license-plate-and-text-the-owner-wait-what-82759-7.jpg" width="250"> | <img src="https://github.com/Rayhchs/Generative-Adversarial-Spatial-Transformer-Network/blob/main/data/true/gm-didi-app-lets-you-scan-a-license-plate-and-text-the-owner-wait-what-82759-7.jpg" width="250">|
-| <img src="https://github.com/Rayhchs/Generative-Adversarial-Spatial-Transformer-Network/blob/main/data/test/images%20(1).jpg" width="250"> | <img src="https://github.com/Rayhchs/Generative-Adversarial-Spatial-Transformer-Network/blob/main/result/images%20(1).jpg" width="250"> | <img src="https://github.com/Rayhchs/Generative-Adversarial-Spatial-Transformer-Network/blob/main/data/true/images%20(1).jpg" width="250"> |
+| <img src="https://github.com/Rayhchs/Generative-Adversarial-Spatial-Transformer-Network/blob/main/data/test/8.png" width="250"> | <img src="https://github.com/Rayhchs/Generative-Adversarial-Spatial-Transformer-Network/blob/main/result/8.png" width="250"> | <img src="https://github.com/Rayhchs/Generative-Adversarial-Spatial-Transformer-Network/blob/main/data/true/8.png" width="250"> |
 | <img src="https://github.com/Rayhchs/Generative-Adversarial-Spatial-Transformer-Network/blob/main/data/test/images.jpg" width="250"> | <img src="https://github.com/Rayhchs/Generative-Adversarial-Spatial-Transformer-Network/blob/main/result/images.jpg" width="250"> | <img src="https://github.com/Rayhchs/Generative-Adversarial-Spatial-Transformer-Network/blob/main/data/true/images.jpg" width="250">|
 
 
