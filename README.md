@@ -74,6 +74,10 @@ Txt file will contain filename of input and label images. (e.g., ./data/train/A/
 There is one input: direction of testing image
 
 ## Results
+The model is trained by less than 100 data. The config.py shows the configuration of the training. Testing results are shown in below.
 
+| Aerial image | Generated map | Ground truth |
+| ------------- | ------------- | ------------- |
+| <img src="https://github.com/Rayhchs/Pix2pix-tensorflow-implementation/blob/main/test/3.jpg" width="250"> | <img src="https://github.com/Rayhchs/Pix2pix-tensorflow-implementation/blob/main/result/3.jpg" width="250"> | <img src="https://github.com/Rayhchs/Pix2pix-tensorflow-implementation/blob/main/test/label_3.jpg" width="250">|
 ## Acknowledge
 STN code is borrowed from [spatial-transformer-network](https://github.com/kevinzakka/spatial-transformer-network). Thanks for the excellent work!
