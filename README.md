@@ -22,7 +22,7 @@ Since the output parameters of localization network is not usually integers, sam
 The network is composed of a STN generator and a discriminator. The STN generator is used for spatial transformation of the input image. The discriminator distinguishes the orthorectified image and non-orthorectified image.
 
 ### STN Generator
-Generator is a single STN. This repo only modify the localization net of STN, which is shown in below:
+Generator is composed of a single STN. This repo only modify the localization net of STN, which is shown in below:
 <div align=center><img src="https://github.com/Rayhchs/Generative-Adversarial-Spatial-Transformer-Network/blob/main/img/LN.jpg" width="600"></div>
 
 ### Discriminator
