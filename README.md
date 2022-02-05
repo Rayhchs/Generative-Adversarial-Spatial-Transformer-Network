@@ -22,7 +22,9 @@ Since the output parameters of localization network is not usually integers, sam
 * CuDNN 8.1.1
 
 ## Network Structure
+<img src="https://github.com/Rayhchs/Generative-Adversarial-Spatial-Transformer-Network/blob/main/img/Network.jpg" width="720">
 The network is composed of a STN generator and a discriminator. The STN generator is used for spatial transformation of the input image. The discriminator distinguish the orthorified image and non-orthorified image.
+
 
 ### STN Generator
 Generator is a single STN. This repo only modify the localization net of STN, which is shown in below.
