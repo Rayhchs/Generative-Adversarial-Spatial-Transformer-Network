@@ -63,7 +63,7 @@ Lambda is set as 1 for this case.
     
 * Train
 
-	  python -m main train <txt filename>
+	  python -m main train -f=<txt filename>
 	  
 Txt file will contain filename of input and label images. (e.g., ./data/train/A/1.jpg, ./data/train/B/1.jpg)
 
