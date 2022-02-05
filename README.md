@@ -18,6 +18,7 @@ Since the output parameters of localization network is not usually integers, sam
 
 
 ### Loss
+**Discriminator loss:**  
 
 
 ## Getting Started
@@ -34,16 +35,16 @@ Since the output parameters of localization network is not usually integers, sam
 
       python -m main train
     
-Afterward, input the direction of inpu 
+**Afterward, input the direction of input **
 
-For training detail:
+* For training detail:
 
       tensorboard --logdir=./log
 
 * Test
       python -m main test
       
-Then, input the direction of testing data
+**Then, input the direction of testing data**
 
 ## Results
 
