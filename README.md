@@ -36,11 +36,11 @@ For Generator loss, this repository involves Vanilla GAN loss as well as MSE los
 
 * **L2 loss:**  
 <div align=center><img src="https://github.com/Rayhchs/Generative-Adversarial-Spatial-Transformer-Network/blob/main/img/MSE_loss.png" height="60"></div>
-Where **y** is orthorified image and **G(x)** is transformed image
+Where y is orthorified image and G(x) is transformed image
 
 * **Final objective:** 
 <div align=center><img src="https://github.com/Rayhchs/Generative-Adversarial-Spatial-Transformer-Network/blob/main/img/OB.png" height="72"></div>
-**Lambda** is set as 1 for this case.
+Lambda is set as 1 for this case.
 
 
 ## Requisite
@@ -49,7 +49,6 @@ Where **y** is orthorified image and **G(x)** is transformed image
 * tensorflow 2.5.0
 * Cuda 11.1
 * CuDNN 8.1.1
-* 
 
 
 ## Getting Started
