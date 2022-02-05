@@ -4,5 +4,12 @@
 
 ## Spatial Transformer Network
 Spatial transformer network is composed of 3 elements:
-* Localization network
-Localization network 
+* Localization network (LN):
+Localization network takes the image or feature map as input and output 6 parameters. These 6 parameters will be used as affine transformation of the input image (or feature map).
+
+* Grid generator:
+Grid generator generate a new grid of x,y coordinate from input image (or feature map) via affine transformation where the parameters are provided by localization network.
+
+* Sampler:
+
+
