@@ -1,6 +1,6 @@
 # Generative-Adversarial-Spatial-Transformer-Network (GASTN)
 
-[Spatial Transformer Network](https://arxiv.org/pdf/1506.02025.pdf), proposed by Max Jaderberg, Karen Simonyan, Andrew Zisserman and Koray Kavukcuoglu, is used to solve the spatial invariant problem of CNN model. In the origin paper, STN is a module which can be inserted anywhere in the network. Therefore, this repository consturcts a Generative Adversarial Network using Spatial Transformer Network to detect and orthorify the object from an image. In this repo, we use this GASTN to detect and orthorify the license plate of Taiwan from an image. However, due to lack of car plate images, this repo only adopts approximately 100 of training data and several testing data.
+[Spatial Transformer Network](https://arxiv.org/pdf/1506.02025.pdf), proposed by Max Jaderberg, Karen Simonyan, Andrew Zisserman and Koray Kavukcuoglu, is used to solve the spatial invariant problem of CNN model. In the origin paper, STN is a module which can be inserted anywhere in the network. Therefore, this repository constructs a Generative Adversarial Network using Spatial Transformer Network to detect and orthorectify the object from an image. In this repo, we use this GASTN to detect and orthorectify the license plate of Taiwan from an image. However, due to lack of car plate images, this repo only adopts approximately 100 of training data and several testing data.
 
 
 ## Spatial Transformer Network
@@ -19,7 +19,7 @@ Since the output parameters of localization network is not usually integers, sam
 
 ## Network Structure
 <div align=center><img src="https://github.com/Rayhchs/Generative-Adversarial-Spatial-Transformer-Network/blob/main/img/Network.jpg" width="720"></div>
-The network is composed of a STN generator and a discriminator. The STN generator is used for spatial transformation of the input image. The discriminator distinguishes the orthorified image and non-orthorified image.
+The network is composed of a STN generator and a discriminator. The STN generator is used for spatial transformation of the input image. The discriminator distinguishes the orthorectified image and non-orthorectified image.
 
 ### STN Generator
 Generator is a single STN. This repo only modify the localization net of STN, which is shown in below:
@@ -36,7 +36,7 @@ For Generator loss, this repository involves Vanilla GAN loss as well as MSE los
 
 * **L2 loss:**  
 <div align=center><img src="https://github.com/Rayhchs/Generative-Adversarial-Spatial-Transformer-Network/blob/main/img/MSE_loss.png" height="60"></div>
-Where y is orthorified image and G(x) is transformed image
+Where y is orthorectified image and G(x) is transformed image
 
 * **Final objective:** 
 <div align=center><img src="https://github.com/Rayhchs/Generative-Adversarial-Spatial-Transformer-Network/blob/main/img/OB.png" height="72"></div>
