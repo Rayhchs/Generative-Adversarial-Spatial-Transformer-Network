@@ -18,7 +18,7 @@ parser = ArgumentParser(usage=None, formatter_class=RawTextHelpFormatter,
     "Users can change configuration via config.py. \n")
 
 parser.add_argument("mode", help="train or test")
-parser.add_argument("filename", help="txt file which includes image directions")
+parser.add_argument("-f", "--filename", type=str, default=None, dest="filename")
 args = parser.parse_args()
 
 def main():
