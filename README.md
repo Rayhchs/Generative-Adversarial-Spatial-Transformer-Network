@@ -83,12 +83,12 @@ The model is trained by less than 100 data. The config.py shows the configuratio
 | <img src="https://github.com/Rayhchs/Generative-Adversarial-Spatial-Transformer-Network/blob/main/data/test/images%20(1).jpg" width="250"> | <img src="https://github.com/Rayhchs/Generative-Adversarial-Spatial-Transformer-Network/blob/main/result/images%20(1).jpg" width="250"> | <img src="https://github.com/Rayhchs/Generative-Adversarial-Spatial-Transformer-Network/blob/main/data/true/images%20(1).jpg" width="250"> |
 | <img src="https://github.com/Rayhchs/Generative-Adversarial-Spatial-Transformer-Network/blob/main/data/test/images.jpg" width="250"> | <img src="https://github.com/Rayhchs/Generative-Adversarial-Spatial-Transformer-Network/blob/main/result/images.jpg" width="250"> | <img src="https://github.com/Rayhchs/Generative-Adversarial-Spatial-Transformer-Network/blob/main/data/true/images.jpg" width="250">|
 
-| Aerial image | Generated map | Ground truth |
-| ------------- | ------------- | ------------- |
-| <img src="https://github.com/Rayhchs/Pix2pix-tensorflow-implementation/blob/main/test/3.jpg" width="250"> | <img src="https://github.com/Rayhchs/Pix2pix-tensorflow-implementation/blob/main/result/3.jpg" width="250"> | <img src="https://github.com/Rayhchs/Pix2pix-tensorflow-implementation/blob/main/test/label_3.jpg" width="250">|
-| <img src="https://github.com/Rayhchs/Pix2pix-tensorflow-implementation/blob/main/test/3.jpg" width="250"> | <img src="https://github.com/Rayhchs/Pix2pix-tensorflow-implementation/blob/main/result/3.jpg" width="250"> | <img src="https://github.com/Rayhchs/Pix2pix-tensorflow-implementation/blob/main/test/label_3.jpg" width="250">|
-| <img src="https://github.com/Rayhchs/Pix2pix-tensorflow-implementation/blob/main/test/3.jpg" width="250"> | <img src="https://github.com/Rayhchs/Pix2pix-tensorflow-implementation/blob/main/result/3.jpg" width="250"> | <img src="https://github.com/Rayhchs/Pix2pix-tensorflow-implementation/blob/main/test/label_3.jpg" width="250">|
-| <img src="https://github.com/Rayhchs/Pix2pix-tensorflow-implementation/blob/main/test/3.jpg" width="250"> | <img src="https://github.com/Rayhchs/Pix2pix-tensorflow-implementation/blob/main/result/3.jpg" width="250"> | <img src="https://github.com/Rayhchs/Pix2pix-tensorflow-implementation/blob/main/test/label_3.jpg" width="250">|
-| <img src="https://github.com/Rayhchs/Pix2pix-tensorflow-implementation/blob/main/test/3.jpg" width="250"> | <img src="https://github.com/Rayhchs/Pix2pix-tensorflow-implementation/blob/main/result/3.jpg" width="250"> | <img src="https://github.com/Rayhchs/Pix2pix-tensorflow-implementation/blob/main/test/label_3.jpg" width="250">|
 ## Acknowledge
 STN code is borrowed from [spatial-transformer-network](https://github.com/kevinzakka/spatial-transformer-network). Thanks for the excellent work!
+
+## References
+https://arxiv.org/pdf/1506.02025.pdf
+
+https://arxiv.org/pdf/1611.07004v3.pdf
+
+https://github.com/kevinzakka/spatial-transformer-network
