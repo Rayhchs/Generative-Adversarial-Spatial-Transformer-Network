@@ -158,7 +158,7 @@ class network():
             loss_gs = []
             for j in range(len(image_lists)):
 
-                batch_x, batch_y = load_data(batch_list[j], self.input_size, self.output_size)
+                batch_x, batch_y = load_data(batch_list[j], self.input_size)
                 _, loss_d = self.sess.run([train_step_d, self.loss_d],
                                           feed_dict={self.x_: batch_x, self.y_: batch_y})
 

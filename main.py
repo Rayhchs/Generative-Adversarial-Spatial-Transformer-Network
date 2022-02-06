@@ -5,11 +5,17 @@ main
 
 @author: Ray
 """
+import sys, os
+if not os.path.isdir("/spatial_transformer_network"):
+    clone = "git clone https://github.com/kevinzakka/spatial-transformer-network.git"
+    os.system(clone)
+    os.rename("spatial-transformer-network", "spatial_transformer_network")
+
+
 from networks import network
 from config import params
 from utils import *
 from argparse import ArgumentParser, RawTextHelpFormatter
-import sys
 
 
 parser = ArgumentParser(usage=None, formatter_class=RawTextHelpFormatter,

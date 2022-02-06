@@ -96,8 +96,8 @@ def d_block(inputs, filters, k_initilizer, kernel_sz=4, strides=1, reuse=False, 
         h = conv_layer(inputs, kernel_sz, filters, strides, 'same', k_initilizer, reuse)
         
         if do_norm:
-            h = normalize_layer(h, k_initilizer)
+            h = tf.layers.batch_normalization(h, epsilon=1e-5, gamma_initializer=k_initilizer)
 
-        h = activation(inputs, act=act)
+        h = activation(h, act=act)
 
         return h

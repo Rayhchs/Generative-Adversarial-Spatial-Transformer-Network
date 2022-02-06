@@ -29,18 +29,18 @@ def load_path(folder):
 
 
 def load_data(images, input_size):
-    a_imgs = []
-    b_imgs = []
+    g_imgs = []
+    d_imgs = []
     for i in range(len(images)):
         g_train, d_train = images[i].split(', ')
         g_img = np.array(image.load_img(g_train, target_size=(input_size, input_size)))
-        d_img = np.array(image.load_img(d_train, target_size=(output_size, output_size)))
+        d_img = np.array(image.load_img(d_train, target_size=(input_size, input_size)))
         g_img = (g_img / 127.5) - 1
         d_img = (d_img / 127.5) - 1
         g_imgs.append(g_img)
         d_imgs.append(d_img)
 
-    return a_imgs, b_imgs, 
+    return g_imgs, d_imgs, 
 
 
 def load_test_data(A_path, input_size):
