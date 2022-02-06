@@ -56,10 +56,6 @@ Lambda is set as 1 for this case.
 
       git clone https://github.com/Rayhchs/Generative-Adversarial-Spatial-Transformer-Network.git
       cd Generative-Adversarial-Spatial-Transformer-Network
-      
-* Clone STN module from [spatial-transformer-network](https://github.com/kevinzakka/spatial-transformer-network)
-
-      git clone https://github.com/kevinzakka/spatial-transformer-network.git
     
 * Train
 
